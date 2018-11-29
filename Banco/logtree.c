@@ -54,28 +54,20 @@ void log_registrar(Log **l, int conta, int classe, int timer, int caixa){
     }
 }
 
-int percorrer_arvore_cliente (Log *l) {
-    int contador = 0;
-
+int percorrer_arvore_cliente (Log *l, int *contador) {
     if (l != NULL){
-        percorrer_arvore_cliente (l->esquerdo);
-        contador = contador + l->timer;
-        percorrer_arvore_cliente (l->direito);
+        percorrer_arvore_cliente (l->esquerdo, contador);
+        *contador = *contador + l->timer;
+        percorrer_arvore_cliente (l->direito, contador);
     }
-
-    return contador;
 }
 
-int percorrer_arvore_tempo (Log *l) {
-    int tempo = 0;
-
+int percorrer_arvore_tempo (Log *l, int *tempo) {
     if (l != NULL){
-        percorrer_arvore_tempo (l->esquerdo);
-        tempo = tempo + l->timer;
-        percorrer_arvore_tempo (l->direito);
+        percorrer_arvore_tempo (l->esquerdo, tempo);
+        *tempo = *tempo + l->timer;
+        percorrer_arvore_tempo (l->direito, tempo);
     }
-
-    return tempo; 
 }
 
 float log_media_por_classe(Log **l, int classe){
@@ -100,7 +92,7 @@ float log_media_por_classe(Log **l, int classe){
 
 int log_obter_soma_por_classe(Log **l, int classe){
     Log *auxiliar;
-    int tempo;
+    int *tempo;
 
     while (auxiliar->classe =! classe) {
         if (auxiliar->classe < classe) {
@@ -110,13 +102,13 @@ int log_obter_soma_por_classe(Log **l, int classe){
         }
     }
 
-    tempo = percorrer_arvore_tempo(auxiliar);
-    return tempo;
+    percorrer_arvore_tempo(auxiliar, tempo);
+    return *tempo;
 }
 
 int log_obter_contagem_por_classe(Log **l, int classe){
     Log *auxiliar;
-    int contador;
+    int *contador;
 
     while (auxiliar->classe =! classe) {
         if (auxiliar->classe < classe) {
@@ -126,7 +118,6 @@ int log_obter_contagem_por_classe(Log **l, int classe){
         }
     }
 
-    contador = percorrer_arvore_cliente(auxiliar);
-    return contador;
-
+    percorrer_arvore_cliente(auxiliar, contador);
+    return *contador;
 }
