@@ -24,7 +24,6 @@ void log_registrar(Log **l, int conta, int classe, int timer, int caixa){
         novoElemento->esquerdo = NULL;
         novoElemento->direito = NULL;
         *l = novoElemento;
-        return 1;
     } else {
         auxiliar = malloc(sizeof(Log));
         *auxiliar = **l;
@@ -52,7 +51,6 @@ void log_registrar(Log **l, int conta, int classe, int timer, int caixa){
         } else {
             auxiliar->direito = novoElemento;
         }
-        return 1;
     }
 }
 

@@ -2,11 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include "fila.h"
+#include "logtree.h"
 
 typedef struct escalonador{
-    struct escalonador *proximo;
-    struct escalonador *anterior;
-    Fila_FIFO *fila;
+    Fila_FIFO *comum;
+    Fila_FIFO *bronze;
+    Fila_FIFO *prata;
+    Fila_FIFO *ouro;
+    Fila_FIFO *premium;
+    int caixas, tempoOperacao, classeAtual, contador;
+    int disciplina[5];
 } Escalonador;
 
 void e_inicializar (Escalonador *e, int caixas, int delta_t, int n_1, int n_2, int n_3, int n_4, int n_5);
