@@ -42,12 +42,10 @@ int f_obter_proxima_chave (Fila_FIFO **fila){
 
     if (*fila != NULL) {
         if ((*fila)->proximo == NULL) {
-            printf("demonio\n");
             chave = (*fila)->chave;
             free(*fila);
             return chave;
         } else {
-            printf("volta\n");
             while (auxiliar->proximo->proximo != NULL){
                 auxiliar = auxiliar->proximo;
             }
