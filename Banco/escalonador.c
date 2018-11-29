@@ -4,7 +4,6 @@
 #include "escalonador.h"
 
 void e_inicializar (Escalonador *e, int caixas, int delta_t, int n_1, int n_2, int n_3, int n_4, int n_5){
-    e = malloc(sizeof(Escalonador));
     f_inicializar(&e->comum);
     f_inicializar(&e->bronze);
     f_inicializar(&e->prata);
@@ -41,28 +40,29 @@ int e_inserir_por_fila (Escalonador *e, int classe, int num_conta, int qtde_oper
 }
 
 int e_obter_prox_num_conta(Escalonador *e){
-    int classe, contador, conta =-1;
+    int classe, contador, conta;
     classe = e->classeAtual;
     contador = e->contador;
     if (classe == 1) {
         conta = f_obter_proxima_chave(&e->premium);
-        contador--;
+        contador = contador - 1;
+        printf ("%d\n", contador);
     }
     if (classe == 2) {
         conta = f_obter_proxima_chave(&e->ouro);
-        contador--;
+        contador = contador - 1;
     }
     if (classe == 3) {
         conta = f_obter_proxima_chave(&e->prata);
-        contador--;
+        contador = contador - 1;
     }
     if (classe == 4) {
         conta = f_obter_proxima_chave(&e->bronze);
-        contador--;
+        contador = contador - 1;
     }
     if (classe == 5) {
         conta = f_obter_proxima_chave(&e->comum);
-        contador--;
+        contador = contador - 1;
     }
     if (contador == 0){
         if (classe == 1) {
@@ -86,6 +86,7 @@ int e_obter_prox_num_conta(Escalonador *e){
             contador = e->disciplina[0];
         }
     }
+    printf("%d\n", classe);
     e->classeAtual = classe;
     e->contador = contador;
     return conta;
@@ -191,8 +192,8 @@ int e_conf_por_arquivo (Escalonador *e, char *nome_arq_conf){
     }
     //recolher informações iniciais
     fscanf(arquivo_entrada,"qtde de caixas = %d\n", &QtdeCaixas);
-    fscanf(arquivo_entrada,"delta t = %d\n",&DTempo);
-    fscanf(arquivo_entrada,"disciplina de escalonamento = {%d,%d,%d,%d,%d}\n",&N_1,&N_2,&N_3,&N_4,&N_5);
+    fscanf(arquivo_entrada,"delta t = %d\n", &DTempo);
+    fscanf(arquivo_entrada,"disciplina de escalonamento = {%d,%d,%d,%d,%d}\n", &N_1, &N_2, &N_3, &N_4, &N_5);
 
     //inicializa o escalonador
     e_inicializar(e, QtdeCaixas, DTempo, N_1, N_2, N_3, N_4, N_5);
@@ -221,9 +222,9 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
     Log *registrador;
     FILE *arquivo_saida;
     int timer = 0, caixa[10], index, qtde_operacoes, conta, classe, verificador, caixaAtual;
-    char *classeStr;
+    char classeStr[10];
     e_conf_por_arquivo(e, nome_arq_in);
-    /*arquivo_saida = fopen(nome_arq_out, "w");
+    arquivo_saida = fopen(nome_arq_out, "w");
 
     verificador = e_consultar_prox_num_conta(e);
 
@@ -261,6 +262,6 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
             }
         }
     }
-
-    fprintf(arquivo_saida, "Tempo total de atendimento: %d", timer);*/
+    
+    fprintf(arquivo_saida, "Tempo total de atendimento: %d", timer);
 }

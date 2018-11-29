@@ -4,11 +4,19 @@
 #include "escalonador.h"
 
 int main(int argc, char const *argv[]){
-    Escalonador *escalonador;
+    int teste, i;
+    Escalonador escalonador;
     char nomeArquivoEntrada[100], nomeArquivoSaida[100];
     strcpy(nomeArquivoEntrada, "entrada-0001.txt");
-    strcpy(nomeArquivoSaida, "saida-0001.txt");
-    e_rodar(escalonador, nomeArquivoEntrada, nomeArquivoSaida);
+    //strcpy(nomeArquivoSaida, "saida-0001.txt");
+    e_conf_por_arquivo(&escalonador, nomeArquivoEntrada);
+    teste = e_obter_prox_num_conta(&escalonador);
+    for (i = 0; i <= 30; i++){
+        printf("%d\n", teste);
+        teste = e_obter_prox_num_conta(&escalonador);
+    }
+    
+    //e_rodar(&escalonador, nomeArquivoEntrada, nomeArquivoSaida);
 
     return 0;
 }
