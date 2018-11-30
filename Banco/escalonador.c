@@ -3,6 +3,7 @@
 #include <string.h>
 #include "escalonador.h"
 
+//Certo
 void e_inicializar (Escalonador *e, int caixas, int delta_t, int n_1, int n_2, int n_3, int n_4, int n_5){
     f_inicializar(&e->comum);
     f_inicializar(&e->bronze);
@@ -20,7 +21,7 @@ void e_inicializar (Escalonador *e, int caixas, int delta_t, int n_1, int n_2, i
     e->contador = e->disciplina[0];
 }
 
-
+//Certo
 int e_inserir_por_fila (Escalonador *e, int classe, int num_conta, int qtde_operacoes){
     if (classe == 1) {
         f_inserir(&e->premium, num_conta, qtde_operacoes);
@@ -35,6 +36,7 @@ int e_inserir_por_fila (Escalonador *e, int classe, int num_conta, int qtde_oper
     }
 }
 
+//Certo
 int e_obter_prox_num_conta(Escalonador *e){
     int classe, contador, conta;
     classe = e->classeAtual;
@@ -80,6 +82,7 @@ int e_obter_prox_num_conta(Escalonador *e){
     return conta;
 }
 
+//Certo
 int e_consultar_prox_num_conta (Escalonador *e){
     int classe, conta;
     classe = e->classeAtual;
@@ -101,6 +104,7 @@ int e_consultar_prox_num_conta (Escalonador *e){
     return conta;
 }
 
+//Certo
 int e_consultar_prox_qtde_oper (Escalonador *e){
     int classe, qtde_operacoes;
     classe = e->classeAtual;
@@ -122,6 +126,7 @@ int e_consultar_prox_qtde_oper (Escalonador *e){
     return qtde_operacoes;
 }
 
+//Certo
 int e_consultar_prox_fila (Escalonador *e){
     int classe;
     classe = e->classeAtual;
@@ -142,6 +147,7 @@ int e_consultar_prox_fila (Escalonador *e){
     }
 }
 
+//Certo
 int e_consultar_qtde_clientes (Escalonador *e){
     int contador = 0;
 
@@ -154,11 +160,12 @@ int e_consultar_qtde_clientes (Escalonador *e){
     return contador;
 }
 
+//Certo
 int e_consultar_tempo_prox_cliente (Escalonador *e){
     int verificar, qtde_operacoes, tempo;
 
     verificar = e_consultar_prox_num_conta(e);
-    if (verificar = -1) {
+    if (verificar == -1) {
         return -1;
     }
 
@@ -214,6 +221,7 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
     e_conf_por_arquivo(e, nome_arq_in);
     arquivo_saida = fopen(nome_arq_out, "w");
 
+    log_inicializar(&registrador);
     verificador = e_consultar_prox_num_conta(e);
 
     while (verificador != -1) { 

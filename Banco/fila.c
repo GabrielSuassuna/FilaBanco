@@ -64,7 +64,7 @@ int f_consultar_proxima_chave (Fila_FIFO **fila){
     int chave;
 
     if (*fila != NULL) {
-        chave = (*fila)->chave;
+        chave = f_consultar_chave_por_posicao(fila, 1);
         return chave;
     } else {
         return -1;
@@ -75,7 +75,7 @@ int f_consultar_proximo_valor (Fila_FIFO **fila){
     int valor;
 
     if (*fila != NULL) {
-        valor = (*fila)->valor;
+        valor = f_consultar_valor_por_posicao(fila, 1);
         return valor;
     } else {
         return -1;
@@ -106,14 +106,15 @@ int f_num_elementos (Fila_FIFO **fila){
 }
 
 int f_consultar_chave_por_posicao (Fila_FIFO **fila, int posicao){ 
-    int chave, posicaoTemp = 1;
+    int chave, posicaoTemp;
     Fila_FIFO *auxiliar;
 
     auxiliar = *fila;
+    posicaoTemp = f_num_elementos(fila);
 
     while (auxiliar != NULL && posicaoTemp != posicao) {
         auxiliar = auxiliar->proximo;
-        posicaoTemp++;
+        posicaoTemp--;
     }
     if (auxiliar == NULL){
         return -1;
@@ -125,20 +126,20 @@ int f_consultar_chave_por_posicao (Fila_FIFO **fila, int posicao){
 }
 
 int f_consultar_valor_por_posicao (Fila_FIFO **fila, int posicao){
-    int valor, posicaoTemp = 1;
+    int valor, posicaoTemp;
     Fila_FIFO *auxiliar;
 
     auxiliar = *fila;
+    posicaoTemp = f_num_elementos(fila);
 
     while (auxiliar != NULL && posicaoTemp != posicao) {
         auxiliar = auxiliar->proximo;
-        posicaoTemp++;
+        posicaoTemp--;
     }
     if (auxiliar == NULL){
         return -1;
     } else {
-        valor = auxiliar->chave;
+        valor = auxiliar->valor;
         return valor;
-    }
-    
+    } 
 }
