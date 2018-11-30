@@ -358,8 +358,8 @@ int e_conf_por_arquivo (Escalonador *e, char *nome_arq_conf){
 void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
     Log *registrador;
     FILE *arquivo_saida;
-    int timer = 0, caixa[10], index, qtde_operacoes, conta, classe, verificador, caixaAtual, maior = 0, qtde_clientes, tempoTotal, operacao[5], caixaValor[10];
-    float tempoMedio, qtde_Media;
+    int timer = 0, caixa[10], index, qtde_operacoes, conta, classe, verificador, caixaAtual, maior = 0, tempoTotal, operacao[5], caixaValor[10];
+    double qtde_clientes, qtde_operacoes_por_classe, tempoMedio, qtde_Media;
     char classeStr[10];
     e_conf_por_arquivo(e, nome_arq_in);
     arquivo_saida = fopen(nome_arq_out, "w");
@@ -378,16 +378,16 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
 
     while (verificador != 0) {
         for (index = 0; index < e->caixas; index++){
-            if (verificador != 0){
-                caixa[index] = caixa[index] - 1;
-                if (caixa[index] == 0){
-                    classe = e->classeAtual;
-                    qtde_operacoes = e_consultar_prox_qtde_oper(e);
+            caixa[index] = caixa[index] - 1;
+            if (caixa[index] == 0){
+                classe = e->classeAtual;
+                qtde_operacoes = e_consultar_prox_qtde_oper(e);
+                conta = e_obter_prox_num_conta(e);
+                if (conta == -1){
                     conta = e_obter_prox_num_conta(e);
-                    if (conta == -1){
-                        conta = e_obter_prox_num_conta(e);
-                        classe = e->classeAtual;
-                    }
+                    classe = e->classeAtual;
+                }
+                if (conta != -1 && conta != 0){
                     operacao[classe-1] = operacao[classe-1] + qtde_operacoes;
                     caixaAtual = index + 1;
                     log_registrar(&registrador, conta, classe, timer, caixaAtual);
@@ -410,8 +410,8 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
                     caixa[index] = qtde_operacoes*e->tempoOperacao;
                     caixaValor[index] = caixaValor[index] + 1;
                 }
-                verificador = e_consultar_prox_num_conta(e);
             }
+            verificador = e_consultar_prox_num_conta(e);
         }
         timer++;
     }
@@ -432,55 +432,57 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 1);
     tempoMedio = log_media_por_classe(&registrador, 1);
 
-    fprintf(arquivo_saida,"Tempo medio de espera dos %d clientes Premium: %.2f\n", qtde_clientes, tempoMedio);
+    fprintf(arquivo_saida,"Tempo medio de espera dos %.0f clientes Premium: %.2f\n", qtde_clientes, tempoMedio);
 
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 2);
     tempoMedio = log_media_por_classe(&registrador, 2);
 
-    fprintf(arquivo_saida,"Tempo medio de espera dos %d clientes Ouro: %.2f\n", qtde_clientes, tempoMedio);
+    fprintf(arquivo_saida,"Tempo medio de espera dos %.0f clientes Ouro: %.2f\n", qtde_clientes, tempoMedio);
 
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 3);
     tempoMedio = log_media_por_classe(&registrador, 3);
 
-    fprintf(arquivo_saida,"Tempo medio de espera dos %d clientes Prata: %.2f\n", qtde_clientes, tempoMedio);
+    fprintf(arquivo_saida,"Tempo medio de espera dos %.0f clientes Prata: %.2f\n", qtde_clientes, tempoMedio);
 
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 4);
     tempoMedio = log_media_por_classe(&registrador, 4);
 
-    fprintf(arquivo_saida,"Tempo medio de espera dos %d clientes Bronze: %.2f\n", qtde_clientes, tempoMedio);
+    fprintf(arquivo_saida,"Tempo medio de espera dos %.0f clientes Bronze: %.2f\n", qtde_clientes, tempoMedio);
 
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 5);
     tempoMedio = log_media_por_classe(&registrador, 5);
 
-    fprintf(arquivo_saida,"Tempo medio de espera dos %d clientes Comum: %.2f\n", qtde_clientes, tempoMedio);
+    fprintf(arquivo_saida,"Tempo medio de espera dos %.0f clientes Comuns: %.2f\n", qtde_clientes, tempoMedio);
 
 
     //Quantidades medias
-    qtde_operacoes = operacao[0];
+    qtde_operacoes_por_classe = operacao[0];
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 1);
-    qtde_Media = qtde_operacoes/qtde_clientes;
-    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Premium: %f\n", qtde_Media);
+    qtde_Media = qtde_operacoes_por_classe/qtde_clientes;
+    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Premium = %.2f\n", qtde_Media);
 
-    qtde_operacoes = operacao[1];
+    qtde_operacoes_por_classe = operacao[1];
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 2);
-    qtde_Media = qtde_operacoes/qtde_clientes;
-    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Premium: %f\n", qtde_Media);
+    qtde_Media = qtde_operacoes_por_classe/qtde_clientes;
+    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Ouro = %.2f\n", qtde_Media);
 
-    qtde_operacoes = operacao[2];
+    qtde_operacoes_por_classe = operacao[2];
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 3);
-    qtde_Media = qtde_operacoes/qtde_clientes;
-    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Premium: %f\n", qtde_Media);
+    qtde_Media = qtde_operacoes_por_classe/qtde_clientes;
+    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Prata = %.2f\n", qtde_Media);
 
-    qtde_operacoes = operacao[3];
+    qtde_operacoes_por_classe = operacao[3];
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 4);
-    qtde_Media = qtde_operacoes/qtde_clientes;
-    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Premium: %f\n", qtde_Media);
+    qtde_Media = qtde_operacoes_por_classe/qtde_clientes;
+    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Bronze = %.2f\n", qtde_Media);
 
-    qtde_operacoes = operacao[4];
+    qtde_operacoes_por_classe = operacao[4];
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 5);
-    qtde_Media = qtde_operacoes/qtde_clientes;
-    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Premium: %f\n", qtde_Media);
+    qtde_Media = qtde_operacoes_por_classe/qtde_clientes;
+    fprintf(arquivo_saida,"Quantidade media de operacoes por cliente Comum = %.2f\n", qtde_Media);
 
+
+    //Quantidade de clientes por caixa
     for (index = 0; index < e->caixas; index++){
         fprintf(arquivo_saida,"O caixa de número %d atendeu %d clientes.\n", index+1, caixaValor[index]);
     }

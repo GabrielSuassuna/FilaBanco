@@ -1,0 +1,138 @@
+T = 0 min: Caixa 1 chama da categoria Premium cliente da conta 924657 para realizar 2 operacao(oes).
+T = 0 min: Caixa 2 chama da categoria Premium cliente da conta 542106 para realizar 4 operacao(oes).
+T = 0 min: Caixa 3 chama da categoria Premium cliente da conta 27475 para realizar 5 operacao(oes).
+T = 0 min: Caixa 4 chama da categoria Premium cliente da conta 350568 para realizar 10 operacao(oes).
+T = 0 min: Caixa 5 chama da categoria Premium cliente da conta 62487 para realizar 8 operacao(oes).
+T = 0 min: Caixa 6 chama da categoria Premium cliente da conta 42675 para realizar 11 operacao(oes).
+T = 0 min: Caixa 7 chama da categoria Premium cliente da conta 404903 para realizar 8 operacao(oes).
+T = 10 min: Caixa 1 chama da categoria Premium cliente da conta 256836 para realizar 2 operacao(oes).
+T = 20 min: Caixa 1 chama da categoria Premium cliente da conta 597003 para realizar 6 operacao(oes).
+T = 20 min: Caixa 2 chama da categoria Premium cliente da conta 345679 para realizar 9 operacao(oes).
+T = 25 min: Caixa 3 chama da categoria Ouro cliente da conta 70527 para realizar 3 operacao(oes).
+T = 40 min: Caixa 3 chama da categoria Ouro cliente da conta 3961 para realizar 1 operacao(oes).
+T = 40 min: Caixa 5 chama da categoria Ouro cliente da conta 707392 para realizar 11 operacao(oes).
+T = 40 min: Caixa 7 chama da categoria Ouro cliente da conta 6483 para realizar 1 operacao(oes).
+T = 45 min: Caixa 3 chama da categoria Ouro cliente da conta 501952 para realizar 11 operacao(oes).
+T = 45 min: Caixa 7 chama da categoria Ouro cliente da conta 63736 para realizar 5 operacao(oes).
+T = 50 min: Caixa 1 chama da categoria Ouro cliente da conta 6151 para realizar 9 operacao(oes).
+T = 50 min: Caixa 4 chama da categoria Ouro cliente da conta 80820 para realizar 8 operacao(oes).
+T = 55 min: Caixa 6 chama da categoria Ouro cliente da conta 876842 para realizar 9 operacao(oes).
+T = 65 min: Caixa 2 chama da categoria Prata cliente da conta 276076 para realizar 7 operacao(oes).
+T = 70 min: Caixa 7 chama da categoria Prata cliente da conta 543053 para realizar 8 operacao(oes).
+T = 90 min: Caixa 4 chama da categoria Prata cliente da conta 980110 para realizar 8 operacao(oes).
+T = 95 min: Caixa 1 chama da categoria Prata cliente da conta 416365 para realizar 8 operacao(oes).
+T = 95 min: Caixa 5 chama da categoria Prata cliente da conta 630706 para realizar 8 operacao(oes).
+T = 100 min: Caixa 2 chama da categoria Prata cliente da conta 558518 para realizar 11 operacao(oes).
+T = 100 min: Caixa 3 chama da categoria Prata cliente da conta 734151 para realizar 9 operacao(oes).
+T = 100 min: Caixa 6 chama da categoria Bronze cliente da conta 502328 para realizar 10 operacao(oes).
+T = 110 min: Caixa 7 chama da categoria Bronze cliente da conta 13205 para realizar 7 operacao(oes).
+T = 130 min: Caixa 4 chama da categoria Bronze cliente da conta 757990 para realizar 6 operacao(oes).
+T = 135 min: Caixa 1 chama da categoria Bronze cliente da conta 410910 para realizar 10 operacao(oes).
+T = 135 min: Caixa 5 chama da categoria Comum cliente da conta 106124 para realizar 11 operacao(oes).
+T = 145 min: Caixa 3 chama da categoria Comum cliente da conta 390691 para realizar 8 operacao(oes).
+T = 145 min: Caixa 7 chama da categoria Comum cliente da conta 99233 para realizar 3 operacao(oes).
+T = 150 min: Caixa 6 chama da categoria Premium cliente da conta 319667 para realizar 7 operacao(oes).
+T = 155 min: Caixa 2 chama da categoria Premium cliente da conta 910927 para realizar 5 operacao(oes).
+T = 160 min: Caixa 4 chama da categoria Premium cliente da conta 285349 para realizar 6 operacao(oes).
+T = 160 min: Caixa 7 chama da categoria Premium cliente da conta 320506 para realizar 8 operacao(oes).
+T = 180 min: Caixa 2 chama da categoria Premium cliente da conta 642584 para realizar 4 operacao(oes).
+T = 185 min: Caixa 1 chama da categoria Premium cliente da conta 647211 para realizar 2 operacao(oes).
+T = 185 min: Caixa 3 chama da categoria Premium cliente da conta 350287 para realizar 8 operacao(oes).
+T = 185 min: Caixa 6 chama da categoria Premium cliente da conta 672119 para realizar 9 operacao(oes).
+T = 190 min: Caixa 4 chama da categoria Premium cliente da conta 448658 para realizar 8 operacao(oes).
+T = 190 min: Caixa 5 chama da categoria Premium cliente da conta 923520 para realizar 5 operacao(oes).
+T = 195 min: Caixa 1 chama da categoria Ouro cliente da conta 281141 para realizar 1 operacao(oes).
+T = 200 min: Caixa 1 chama da categoria Ouro cliente da conta 173859 para realizar 5 operacao(oes).
+T = 200 min: Caixa 2 chama da categoria Ouro cliente da conta 880075 para realizar 9 operacao(oes).
+T = 200 min: Caixa 7 chama da categoria Ouro cliente da conta 18837 para realizar 7 operacao(oes).
+T = 215 min: Caixa 5 chama da categoria Ouro cliente da conta 5025 para realizar 11 operacao(oes).
+T = 225 min: Caixa 1 chama da categoria Ouro cliente da conta 11282 para realizar 2 operacao(oes).
+T = 225 min: Caixa 3 chama da categoria Ouro cliente da conta 331348 para realizar 10 operacao(oes).
+T = 230 min: Caixa 4 chama da categoria Ouro cliente da conta 209834 para realizar 4 operacao(oes).
+T = 230 min: Caixa 6 chama da categoria Ouro cliente da conta 755297 para realizar 8 operacao(oes).
+T = 235 min: Caixa 1 chama da categoria Prata cliente da conta 802576 para realizar 6 operacao(oes).
+T = 235 min: Caixa 7 chama da categoria Prata cliente da conta 146473 para realizar 7 operacao(oes).
+T = 245 min: Caixa 2 chama da categoria Prata cliente da conta 42667 para realizar 5 operacao(oes).
+T = 250 min: Caixa 4 chama da categoria Prata cliente da conta 903996 para realizar 1 operacao(oes).
+T = 255 min: Caixa 4 chama da categoria Prata cliente da conta 362670 para realizar 6 operacao(oes).
+T = 265 min: Caixa 1 chama da categoria Prata cliente da conta 761671 para realizar 11 operacao(oes).
+T = 270 min: Caixa 2 chama da categoria Prata cliente da conta 769250 para realizar 3 operacao(oes).
+T = 270 min: Caixa 5 chama da categoria Bronze cliente da conta 177376 para realizar 10 operacao(oes).
+T = 270 min: Caixa 6 chama da categoria Bronze cliente da conta 303951 para realizar 2 operacao(oes).
+T = 270 min: Caixa 7 chama da categoria Bronze cliente da conta 632767 para realizar 11 operacao(oes).
+T = 275 min: Caixa 3 chama da categoria Bronze cliente da conta 325215 para realizar 8 operacao(oes).
+T = 280 min: Caixa 6 chama da categoria Comum cliente da conta 708826 para realizar 11 operacao(oes).
+T = 285 min: Caixa 2 chama da categoria Comum cliente da conta 152445 para realizar 4 operacao(oes).
+T = 285 min: Caixa 4 chama da categoria Comum cliente da conta 523848 para realizar 1 operacao(oes).
+T = 290 min: Caixa 4 chama da categoria Premium cliente da conta 615893 para realizar 4 operacao(oes).
+T = 305 min: Caixa 2 chama da categoria Ouro cliente da conta 345820 para realizar 3 operacao(oes).
+T = 310 min: Caixa 4 chama da categoria Ouro cliente da conta 60698 para realizar 10 operacao(oes).
+T = 315 min: Caixa 3 chama da categoria Prata cliente da conta 635672 para realizar 7 operacao(oes).
+T = 320 min: Caixa 1 chama da categoria Prata cliente da conta 55366 para realizar 10 operacao(oes).
+T = 320 min: Caixa 2 chama da categoria Prata cliente da conta 146008 para realizar 4 operacao(oes).
+T = 320 min: Caixa 5 chama da categoria Prata cliente da conta 250146 para realizar 1 operacao(oes).
+T = 325 min: Caixa 5 chama da categoria Prata cliente da conta 521923 para realizar 6 operacao(oes).
+T = 325 min: Caixa 7 chama da categoria Prata cliente da conta 536485 para realizar 8 operacao(oes).
+T = 335 min: Caixa 6 chama da categoria Prata cliente da conta 147514 para realizar 11 operacao(oes).
+T = 340 min: Caixa 2 chama da categoria Bronze cliente da conta 904512 para realizar 10 operacao(oes).
+T = 350 min: Caixa 3 chama da categoria Bronze cliente da conta 833749 para realizar 5 operacao(oes).
+T = 355 min: Caixa 5 chama da categoria Bronze cliente da conta 930322 para realizar 2 operacao(oes).
+T = 360 min: Caixa 4 chama da categoria Bronze cliente da conta 426175 para realizar 8 operacao(oes).
+T = 365 min: Caixa 5 chama da categoria Comum cliente da conta 716774 para realizar 9 operacao(oes).
+T = 365 min: Caixa 7 chama da categoria Comum cliente da conta 383851 para realizar 6 operacao(oes).
+T = 370 min: Caixa 1 chama da categoria Comum cliente da conta 753013 para realizar 10 operacao(oes).
+T = 375 min: Caixa 3 chama da categoria Prata cliente da conta 948520 para realizar 8 operacao(oes).
+T = 390 min: Caixa 2 chama da categoria Prata cliente da conta 343677 para realizar 8 operacao(oes).
+T = 390 min: Caixa 6 chama da categoria Prata cliente da conta 700793 para realizar 8 operacao(oes).
+T = 395 min: Caixa 7 chama da categoria Bronze cliente da conta 251938 para realizar 10 operacao(oes).
+T = 400 min: Caixa 4 chama da categoria Bronze cliente da conta 34620 para realizar 3 operacao(oes).
+T = 410 min: Caixa 5 chama da categoria Bronze cliente da conta 387069 para realizar 5 operacao(oes).
+T = 415 min: Caixa 3 chama da categoria Bronze cliente da conta 657869 para realizar 5 operacao(oes).
+T = 415 min: Caixa 4 chama da categoria Comum cliente da conta 691149 para realizar 7 operacao(oes).
+T = 420 min: Caixa 1 chama da categoria Comum cliente da conta 87845 para realizar 10 operacao(oes).
+T = 430 min: Caixa 2 chama da categoria Comum cliente da conta 598757 para realizar 2 operacao(oes).
+T = 430 min: Caixa 6 chama da categoria Bronze cliente da conta 318409 para realizar 10 operacao(oes).
+T = 435 min: Caixa 5 chama da categoria Bronze cliente da conta 455827 para realizar 4 operacao(oes).
+T = 440 min: Caixa 2 chama da categoria Bronze cliente da conta 841450 para realizar 4 operacao(oes).
+T = 440 min: Caixa 3 chama da categoria Bronze cliente da conta 908788 para realizar 9 operacao(oes).
+T = 445 min: Caixa 7 chama da categoria Comum cliente da conta 475131 para realizar 8 operacao(oes).
+T = 450 min: Caixa 4 chama da categoria Comum cliente da conta 98426 para realizar 2 operacao(oes).
+T = 455 min: Caixa 5 chama da categoria Comum cliente da conta 434679 para realizar 4 operacao(oes).
+T = 460 min: Caixa 2 chama da categoria Bronze cliente da conta 200502 para realizar 11 operacao(oes).
+T = 460 min: Caixa 4 chama da categoria Bronze cliente da conta 437686 para realizar 7 operacao(oes).
+T = 470 min: Caixa 1 chama da categoria Bronze cliente da conta 80690 para realizar 7 operacao(oes).
+T = 475 min: Caixa 5 chama da categoria Bronze cliente da conta 80427 para realizar 10 operacao(oes).
+T = 480 min: Caixa 6 chama da categoria Comum cliente da conta 177519 para realizar 3 operacao(oes).
+T = 485 min: Caixa 3 chama da categoria Comum cliente da conta 215318 para realizar 5 operacao(oes).
+T = 485 min: Caixa 7 chama da categoria Comum cliente da conta 902340 para realizar 7 operacao(oes).
+T = 495 min: Caixa 4 chama da categoria Bronze cliente da conta 286578 para realizar 10 operacao(oes).
+T = 495 min: Caixa 6 chama da categoria Bronze cliente da conta 310066 para realizar 11 operacao(oes).
+T = 505 min: Caixa 1 chama da categoria Bronze cliente da conta 480555 para realizar 1 operacao(oes).
+T = 510 min: Caixa 1 chama da categoria Bronze cliente da conta 676595 para realizar 11 operacao(oes).
+T = 510 min: Caixa 3 chama da categoria Comum cliente da conta 670958 para realizar 9 operacao(oes).
+T = 515 min: Caixa 2 chama da categoria Comum cliente da conta 760314 para realizar 3 operacao(oes).
+T = 520 min: Caixa 7 chama da categoria Comum cliente da conta 162913 para realizar 1 operacao(oes).
+T = 525 min: Caixa 5 chama da categoria Bronze cliente da conta 300957 para realizar 1 operacao(oes).
+T = 525 min: Caixa 7 chama da categoria Bronze cliente da conta 324973 para realizar 8 operacao(oes).
+T = 530 min: Caixa 2 chama da categoria Comum cliente da conta 493637 para realizar 7 operacao(oes).
+T = 530 min: Caixa 5 chama da categoria Comum cliente da conta 230604 para realizar 2 operacao(oes).
+T = 540 min: Caixa 5 chama da categoria Comum cliente da conta 964907 para realizar 4 operacao(oes).
+T = 545 min: Caixa 4 chama da categoria Comum cliente da conta 710317 para realizar 2 operacao(oes).
+Tempo total de atendimento: 565 minutos.
+Tempo medio de espera dos 21 clientes Premium: 99.05
+Tempo medio de espera dos 20 clientes Ouro: 146.25
+Tempo medio de espera dos 24 clientes Prata: 241.04
+Tempo medio de espera dos 30 clientes Bronze: 375.00
+Tempo medio de espera dos 25 clientes Comuns: 405.20
+Quantidade media de operacoes por cliente Premium = 6.24
+Quantidade media de operacoes por cliente Ouro = 6.40
+Quantidade media de operacoes por cliente Prata = 7.04
+Quantidade media de operacoes por cliente Bronze = 7.20
+Quantidade media de operacoes por cliente Comum = 5.56
+O caixa de número 1 atendeu 18 clientes.
+O caixa de número 2 atendeu 19 clientes.
+O caixa de número 3 atendeu 16 clientes.
+O caixa de número 4 atendeu 19 clientes.
+O caixa de número 5 atendeu 18 clientes.
+O caixa de número 6 atendeu 13 clientes.
+O caixa de número 7 atendeu 17 clientes.

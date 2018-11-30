@@ -45,8 +45,7 @@ void log_registrar(Log **l, int conta, int classe, int timer, int caixa){
 }
 
 float log_media_por_classe(Log **l, int classe){
-    int tempo_total, qtd_clientes;
-    float tempo_medio;
+    float tempo_total, qtd_clientes, tempo_medio;
 
     tempo_total = log_obter_soma_por_classe(l, classe);
     qtd_clientes = log_obter_contagem_por_classe(l, classe);

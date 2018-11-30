@@ -1,0 +1,92 @@
+T = 0 min: Caixa 1 chama da categoria Premium cliente da conta 548131 para realizar 1 operacao(oes).
+T = 0 min: Caixa 2 chama da categoria Premium cliente da conta 509296 para realizar 5 operacao(oes).
+T = 0 min: Caixa 3 chama da categoria Premium cliente da conta 660709 para realizar 5 operacao(oes).
+T = 0 min: Caixa 4 chama da categoria Premium cliente da conta 775606 para realizar 4 operacao(oes).
+T = 0 min: Caixa 5 chama da categoria Premium cliente da conta 95387 para realizar 9 operacao(oes).
+T = 0 min: Caixa 6 chama da categoria Premium cliente da conta 757910 para realizar 11 operacao(oes).
+T = 0 min: Caixa 7 chama da categoria Premium cliente da conta 478003 para realizar 6 operacao(oes).
+T = 0 min: Caixa 8 chama da categoria Premium cliente da conta 165008 para realizar 1 operacao(oes).
+T = 0 min: Caixa 9 chama da categoria Premium cliente da conta 534628 para realizar 4 operacao(oes).
+T = 0 min: Caixa 10 chama da categoria Premium cliente da conta 859383 para realizar 6 operacao(oes).
+T = 1 min: Caixa 1 chama da categoria Ouro cliente da conta 932797 para realizar 3 operacao(oes).
+T = 1 min: Caixa 8 chama da categoria Ouro cliente da conta 864342 para realizar 9 operacao(oes).
+T = 4 min: Caixa 1 chama da categoria Ouro cliente da conta 521914 para realizar 2 operacao(oes).
+T = 4 min: Caixa 4 chama da categoria Ouro cliente da conta 946842 para realizar 7 operacao(oes).
+T = 4 min: Caixa 9 chama da categoria Ouro cliente da conta 683518 para realizar 3 operacao(oes).
+T = 5 min: Caixa 2 chama da categoria Ouro cliente da conta 749263 para realizar 11 operacao(oes).
+T = 5 min: Caixa 3 chama da categoria Ouro cliente da conta 957142 para realizar 11 operacao(oes).
+T = 6 min: Caixa 1 chama da categoria Ouro cliente da conta 577760 para realizar 3 operacao(oes).
+T = 6 min: Caixa 7 chama da categoria Ouro cliente da conta 928539 para realizar 11 operacao(oes).
+T = 6 min: Caixa 10 chama da categoria Ouro cliente da conta 498607 para realizar 9 operacao(oes).
+T = 7 min: Caixa 9 chama da categoria Prata cliente da conta 188146 para realizar 4 operacao(oes).
+T = 9 min: Caixa 1 chama da categoria Prata cliente da conta 269692 para realizar 10 operacao(oes).
+T = 9 min: Caixa 5 chama da categoria Prata cliente da conta 351868 para realizar 10 operacao(oes).
+T = 10 min: Caixa 8 chama da categoria Prata cliente da conta 682566 para realizar 5 operacao(oes).
+T = 11 min: Caixa 4 chama da categoria Prata cliente da conta 896900 para realizar 3 operacao(oes).
+T = 11 min: Caixa 6 chama da categoria Prata cliente da conta 507761 para realizar 10 operacao(oes).
+T = 11 min: Caixa 9 chama da categoria Prata cliente da conta 153781 para realizar 11 operacao(oes).
+T = 14 min: Caixa 4 chama da categoria Bronze cliente da conta 46225 para realizar 1 operacao(oes).
+T = 15 min: Caixa 4 chama da categoria Bronze cliente da conta 824537 para realizar 11 operacao(oes).
+T = 15 min: Caixa 8 chama da categoria Bronze cliente da conta 907483 para realizar 10 operacao(oes).
+T = 15 min: Caixa 10 chama da categoria Bronze cliente da conta 553214 para realizar 11 operacao(oes).
+T = 16 min: Caixa 2 chama da categoria Bronze cliente da conta 962006 para realizar 6 operacao(oes).
+T = 16 min: Caixa 3 chama da categoria Comum cliente da conta 691892 para realizar 1 operacao(oes).
+T = 17 min: Caixa 3 chama da categoria Comum cliente da conta 687266 para realizar 8 operacao(oes).
+T = 17 min: Caixa 7 chama da categoria Ouro cliente da conta 71339 para realizar 10 operacao(oes).
+T = 19 min: Caixa 1 chama da categoria Prata cliente da conta 755505 para realizar 6 operacao(oes).
+T = 19 min: Caixa 5 chama da categoria Prata cliente da conta 200265 para realizar 3 operacao(oes).
+T = 21 min: Caixa 6 chama da categoria Prata cliente da conta 754909 para realizar 6 operacao(oes).
+T = 22 min: Caixa 2 chama da categoria Prata cliente da conta 518352 para realizar 6 operacao(oes).
+T = 22 min: Caixa 5 chama da categoria Prata cliente da conta 418832 para realizar 7 operacao(oes).
+T = 22 min: Caixa 9 chama da categoria Prata cliente da conta 805729 para realizar 10 operacao(oes).
+T = 25 min: Caixa 1 chama da categoria Prata cliente da conta 45671 para realizar 5 operacao(oes).
+T = 25 min: Caixa 3 chama da categoria Bronze cliente da conta 345706 para realizar 1 operacao(oes).
+T = 25 min: Caixa 8 chama da categoria Bronze cliente da conta 941332 para realizar 3 operacao(oes).
+T = 26 min: Caixa 3 chama da categoria Bronze cliente da conta 374850 para realizar 6 operacao(oes).
+T = 26 min: Caixa 4 chama da categoria Bronze cliente da conta 806869 para realizar 11 operacao(oes).
+T = 26 min: Caixa 10 chama da categoria Bronze cliente da conta 57286 para realizar 9 operacao(oes).
+T = 27 min: Caixa 6 chama da categoria Comum cliente da conta 713307 para realizar 6 operacao(oes).
+T = 27 min: Caixa 7 chama da categoria Comum cliente da conta 648637 para realizar 6 operacao(oes).
+T = 28 min: Caixa 2 chama da categoria Bronze cliente da conta 775362 para realizar 6 operacao(oes).
+T = 28 min: Caixa 8 chama da categoria Bronze cliente da conta 898493 para realizar 2 operacao(oes).
+T = 29 min: Caixa 5 chama da categoria Bronze cliente da conta 920519 para realizar 10 operacao(oes).
+T = 30 min: Caixa 1 chama da categoria Bronze cliente da conta 790373 para realizar 9 operacao(oes).
+T = 30 min: Caixa 8 chama da categoria Bronze cliente da conta 22942 para realizar 8 operacao(oes).
+T = 32 min: Caixa 3 chama da categoria Comum cliente da conta 307568 para realizar 2 operacao(oes).
+T = 32 min: Caixa 9 chama da categoria Comum cliente da conta 367623 para realizar 5 operacao(oes).
+T = 33 min: Caixa 6 chama da categoria Bronze cliente da conta 898196 para realizar 10 operacao(oes).
+T = 33 min: Caixa 7 chama da categoria Comum cliente da conta 835880 para realizar 6 operacao(oes).
+T = 34 min: Caixa 2 chama da categoria Comum cliente da conta 819195 para realizar 3 operacao(oes).
+T = 34 min: Caixa 3 chama da categoria Comum cliente da conta 441998 para realizar 8 operacao(oes).
+T = 35 min: Caixa 10 chama da categoria Comum cliente da conta 16186 para realizar 11 operacao(oes).
+T = 37 min: Caixa 2 chama da categoria Comum cliente da conta 788391 para realizar 5 operacao(oes).
+T = 37 min: Caixa 4 chama da categoria Comum cliente da conta 547177 para realizar 9 operacao(oes).
+T = 37 min: Caixa 9 chama da categoria Comum cliente da conta 525717 para realizar 4 operacao(oes).
+T = 38 min: Caixa 8 chama da categoria Comum cliente da conta 31151 para realizar 2 operacao(oes).
+T = 39 min: Caixa 1 chama da categoria Comum cliente da conta 400188 para realizar 11 operacao(oes).
+T = 39 min: Caixa 5 chama da categoria Comum cliente da conta 509737 para realizar 11 operacao(oes).
+T = 39 min: Caixa 7 chama da categoria Comum cliente da conta 473183 para realizar 8 operacao(oes).
+T = 40 min: Caixa 8 chama da categoria Comum cliente da conta 123258 para realizar 4 operacao(oes).
+T = 41 min: Caixa 9 chama da categoria Comum cliente da conta 288711 para realizar 8 operacao(oes).
+T = 42 min: Caixa 2 chama da categoria Comum cliente da conta 547285 para realizar 5 operacao(oes).
+Tempo total de atendimento: 50 minutos.
+Tempo medio de espera dos 10 clientes Premium: 0.00
+Tempo medio de espera dos 11 clientes Ouro: 5.36
+Tempo medio de espera dos 14 clientes Prata: 15.57
+Tempo medio de espera dos 16 clientes Bronze: 23.81
+Tempo medio de espera dos 20 clientes Comuns: 33.80
+Quantidade media de operacoes por cliente Premium = 5.20
+Quantidade media de operacoes por cliente Ouro = 7.18
+Quantidade media de operacoes por cliente Prata = 6.86
+Quantidade media de operacoes por cliente Bronze = 7.12
+Quantidade media de operacoes por cliente Comum = 6.15
+O caixa de número 1 atendeu 9 clientes.
+O caixa de número 2 atendeu 8 clientes.
+O caixa de número 3 atendeu 8 clientes.
+O caixa de número 4 atendeu 7 clientes.
+O caixa de número 5 atendeu 6 clientes.
+O caixa de número 6 atendeu 5 clientes.
+O caixa de número 7 atendeu 6 clientes.
+O caixa de número 8 atendeu 9 clientes.
+O caixa de número 9 atendeu 8 clientes.
+O caixa de número 10 atendeu 5 clientes.
