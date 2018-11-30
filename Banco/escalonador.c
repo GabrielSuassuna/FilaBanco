@@ -44,106 +44,243 @@ int e_obter_prox_num_conta(Escalonador *e){
     
     if (classe == 1) {
         conta = f_obter_proxima_chave(&e->premium);
-        contador = contador - 1;
+        if (conta == -1){
+            contador = 0;
+        } else {
+            contador--;
+        }
     } else if (classe == 2) {
         conta = f_obter_proxima_chave(&e->ouro);
-        contador = contador - 1;
+        if (conta == -1){
+            contador = 0;
+        } else {
+            contador--;
+        }
     } else if (classe == 3) {
         conta = f_obter_proxima_chave(&e->prata);
-        contador = contador - 1;
+        if (conta == -1){
+            contador = 0;
+        } else {
+            contador--;
+        }
     } else if (classe == 4) {
         conta = f_obter_proxima_chave(&e->bronze);
-        contador = contador - 1;
+        if (conta == -1){
+            contador = 0;
+        } else {
+            contador--;
+        }
     } else if (classe == 5) {
         conta = f_obter_proxima_chave(&e->comum);
-        contador = contador - 1;
+        if (conta == -1){
+            contador = 0;
+        } else {
+            contador--;
+        }
     }
     
     if (contador == 0){
         if (classe == 1) {
-            e->classeAtual = 2;
+            classe = e_consultar_prox_fila(e);
+            e->classeAtual = classe;
             contador = e->disciplina[1];
         } else if (classe == 2) {
-            e->classeAtual = 3;
+            classe = e_consultar_prox_fila(e); 
+            e->classeAtual = classe;
             contador = e->disciplina[2];
         } else if (classe == 3) {
-            e->classeAtual = 4;
+            classe = e_consultar_prox_fila(e); 
+            e->classeAtual = classe;
             contador = e->disciplina[3];
         } else if (classe == 4) {
-            e->classeAtual = 5;
+            classe = e_consultar_prox_fila(e); 
+            e->classeAtual = classe;
             contador = e->disciplina[4];
         } else if (classe == 5) {
-            e->classeAtual = 1;
+            classe = e_consultar_prox_fila(e); 
+            e->classeAtual = classe;
             contador = e->disciplina[0];
         }
     }
     
     e->contador = contador;
-    return conta;
+    if (conta == -1){
+        return e_consultar_prox_num_conta(e);
+    } else {
+        return conta;
+    }
+    
 }
 
 //Certo
 int e_consultar_prox_num_conta (Escalonador *e){
     int classe, conta;
     classe = e->classeAtual;
-    if (classe == 1) {
-        conta = f_consultar_proxima_chave(&e->premium);
+    while (classe != 0){
+        if (classe == 1) {
+            conta = f_consultar_proxima_chave(&e->premium);
+            if (conta == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return conta;
+            }
+        }
+        if (classe == 2) {
+            conta = f_consultar_proxima_chave(&e->ouro);
+            if (conta == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return conta;
+            }
+        }
+        if (classe == 3) {
+            conta = f_consultar_proxima_chave(&e->prata);
+            if (conta == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return conta;
+            }
+        }
+        if (classe == 4) {
+            conta = f_consultar_proxima_chave(&e->bronze);
+            if (conta == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return conta;
+            }
+        }
+        if (classe == 5) {
+            conta = f_consultar_proxima_chave(&e->comum);
+            if (conta == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return conta;
+            }
+        }
     }
-    if (classe == 2) {
-        conta = f_consultar_proxima_chave(&e->ouro);
-    }
-    if (classe == 3) {
-        conta = f_consultar_proxima_chave(&e->prata);
-    }
-    if (classe == 4) {
-        conta = f_consultar_proxima_chave(&e->bronze);
-    }
-    if (classe == 5) {
-        conta = f_consultar_proxima_chave(&e->comum);
-    }
-    return conta;
+    return 0;
 }
 
 //Certo
 int e_consultar_prox_qtde_oper (Escalonador *e){
     int classe, qtde_operacoes;
     classe = e->classeAtual;
-    if (classe == 1) {
-        qtde_operacoes = f_consultar_proximo_valor(&e->premium);
+    while (classe != 0){
+        if (classe == 1) {
+            qtde_operacoes = f_consultar_proximo_valor(&e->premium);
+            if (qtde_operacoes == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return qtde_operacoes;
+            }
+        }
+        if (classe == 2) {
+            qtde_operacoes = f_consultar_proximo_valor(&e->ouro);
+            if (qtde_operacoes == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return qtde_operacoes;
+            }
+        }
+        if (classe == 3) {
+            qtde_operacoes = f_consultar_proximo_valor(&e->prata);
+            if (qtde_operacoes == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return qtde_operacoes;
+            }
+        }
+        if (classe == 4) {
+            qtde_operacoes = f_consultar_proximo_valor(&e->bronze);
+            if (qtde_operacoes == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return qtde_operacoes;
+            }
+        }
+        if (classe == 5) {
+            qtde_operacoes = f_consultar_proximo_valor(&e->comum);
+            if (qtde_operacoes == -1){
+                classe = e_consultar_prox_fila(e);
+            } else {
+                return qtde_operacoes;
+            }
+        }
     }
-    if (classe == 2) {
-        qtde_operacoes = f_consultar_proximo_valor(&e->ouro);
-    }
-    if (classe == 3) {
-        qtde_operacoes = f_consultar_proximo_valor(&e->prata);
-    }
-    if (classe == 4) {
-        qtde_operacoes = f_consultar_proximo_valor(&e->bronze);
-    }
-    if (classe == 5) {
-        qtde_operacoes = f_consultar_proximo_valor(&e->comum);
-    }
-    return qtde_operacoes;
+    return 0;
 }
 
 //Certo
 int e_consultar_prox_fila (Escalonador *e){
     int classe;
     classe = e->classeAtual;
-    if (classe == 1) {
-        return 2;
+    
+    if (classe == 1){
+        if(e->ouro != NULL){
+            return 2;
+        } else if(e->prata != NULL){
+            return 3;
+        } else if (e->bronze != NULL) {
+            return 4;
+        } else if (e->comum != NULL){
+            return 5;
+        } else {
+            return 0;
+        }
     }
-    if (classe == 2) {
-        return 3;
+    if (classe == 2){
+        if(e->prata != NULL){
+            return 3;
+        } else if(e->bronze != NULL){
+            return 4;
+        } else if (e->comum != NULL) {
+            return 5;
+        } else if (e->premium != NULL){
+            return 1;
+        } else {
+            return 0;
+        }
     }
-    if (classe == 3) {
-        return 4;
+    if (classe == 3){
+        if(e->bronze != NULL){
+            return 4;
+        } else if(e->comum != NULL){
+            return 5;
+        } else if (e->premium != NULL) {
+            return 1;
+        } else if (e->ouro != NULL){
+            return 2;
+        } else {
+            return 0;
+        }
     }
-    if (classe == 4) {
-        return 5;
+    if (classe == 4){
+        if(e->comum != NULL){
+            return 5;
+        } else if(e->premium != NULL){
+            return 1;
+        } else if (e->ouro != NULL) {
+            return 2;
+        } else if (e->prata != NULL){
+            return 3;
+        } else {
+            return 0;
+        }
     }
-    if (classe == 5) {
-        return 1;
+    if (classe == 5){
+        if(e->premium != NULL){
+            return 1;
+        } else if(e->ouro != NULL){
+            return 2;
+        } else if (e->prata != NULL) {
+            return 3;
+        } else if (e->bronze != NULL){
+            return 4;
+        } else if (e->comum != NULL){
+            return 5;
+        } else {
+            return 0;
+        }
     }
 }
 
@@ -224,9 +361,15 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
     log_inicializar(&registrador);
     verificador = e_consultar_prox_num_conta(e);
 
-    while (verificador != -1) { 
+    for (index = 0; index < e->caixas; index++){
+        caixa[index] = 1;
+    }
+
+    while (verificador != 0) {
         for (index = 0; index < e->caixas; index++){
-            if (verificador != -1){
+            if (verificador != 0){
+                conta = verificador;
+                caixa[index] = caixa[index] - 1;
                 if (caixa[index] == 0){
                     classe = e->classeAtual;
                     qtde_operacoes = e_consultar_prox_qtde_oper(e);
@@ -250,13 +393,11 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
                     }
                     fprintf(arquivo_saida, "T = %d min: Caixa %d chama da categoria %s cliente da conta %d para realizar %d operacao(oes).\n", timer, caixaAtual, classeStr, conta, qtde_operacoes);
                     caixa[index] = qtde_operacoes*e->tempoOperacao;
-                } else {
-                    caixa[index] = caixa[index] - 1;
                 }
-                timer++;
                 verificador = e_consultar_prox_num_conta(e);
             }
         }
+        timer++;
     }
     
     fprintf(arquivo_saida, "Tempo total de atendimento: %d", timer);
