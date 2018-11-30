@@ -12,7 +12,9 @@ int main(int argc, char const *argv[]){
     e_conf_por_arquivo(&escalonador, nomeArquivoEntrada);
     teste = e_obter_prox_num_conta(&escalonador);
     for (i = 0; i <= 30; i++){
-        printf("%d\n", teste);
+        if (teste != -1){
+            printf("%d\n", teste);
+        }
         teste = e_obter_prox_num_conta(&escalonador);
     }
     

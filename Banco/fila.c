@@ -44,6 +44,7 @@ int f_obter_proxima_chave (Fila_FIFO **fila){
         if ((*fila)->proximo == NULL) {
             chave = (*fila)->chave;
             free(*fila);
+            *fila = NULL;
             return chave;
         } else {
             while (auxiliar->proximo->proximo != NULL){

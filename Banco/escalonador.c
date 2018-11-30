@@ -24,17 +24,13 @@ void e_inicializar (Escalonador *e, int caixas, int delta_t, int n_1, int n_2, i
 int e_inserir_por_fila (Escalonador *e, int classe, int num_conta, int qtde_operacoes){
     if (classe == 1) {
         f_inserir(&e->premium, num_conta, qtde_operacoes);
-    }
-    if (classe == 2) {
+    } else if (classe == 2) {
         f_inserir(&e->ouro, num_conta, qtde_operacoes);
-    }
-    if (classe == 3) {
+    } else if (classe == 3) {
         f_inserir(&e->prata, num_conta, qtde_operacoes);
-    }
-    if (classe == 4) {
+    } else if (classe == 4) {
         f_inserir(&e->bronze, num_conta, qtde_operacoes);
-    }
-    if (classe == 5) {
+    } else if (classe == 5) {
         f_inserir(&e->comum, num_conta, qtde_operacoes);
     }
 }
@@ -43,51 +39,43 @@ int e_obter_prox_num_conta(Escalonador *e){
     int classe, contador, conta;
     classe = e->classeAtual;
     contador = e->contador;
+    
     if (classe == 1) {
         conta = f_obter_proxima_chave(&e->premium);
         contador = contador - 1;
-        printf ("%d\n", contador);
-    }
-    if (classe == 2) {
+    } else if (classe == 2) {
         conta = f_obter_proxima_chave(&e->ouro);
         contador = contador - 1;
-    }
-    if (classe == 3) {
+    } else if (classe == 3) {
         conta = f_obter_proxima_chave(&e->prata);
         contador = contador - 1;
-    }
-    if (classe == 4) {
+    } else if (classe == 4) {
         conta = f_obter_proxima_chave(&e->bronze);
         contador = contador - 1;
-    }
-    if (classe == 5) {
+    } else if (classe == 5) {
         conta = f_obter_proxima_chave(&e->comum);
         contador = contador - 1;
     }
+    
     if (contador == 0){
         if (classe == 1) {
-            classe = 2;
+            e->classeAtual = 2;
             contador = e->disciplina[1];
-        }
-        if (classe == 2) {
-            classe = 3;
+        } else if (classe == 2) {
+            e->classeAtual = 3;
             contador = e->disciplina[2];
-        }
-        if (classe == 3) {
-            classe = 4;
+        } else if (classe == 3) {
+            e->classeAtual = 4;
             contador = e->disciplina[3];
-        }
-        if (classe == 4) {
-            classe = 5;
+        } else if (classe == 4) {
+            e->classeAtual = 5;
             contador = e->disciplina[4];
-        }
-        if (classe == 5) {
-            classe = 1;
+        } else if (classe == 5) {
+            e->classeAtual = 1;
             contador = e->disciplina[0];
         }
     }
-    printf("%d\n", classe);
-    e->classeAtual = classe;
+    
     e->contador = contador;
     return conta;
 }
