@@ -3,10 +3,13 @@
 #include <string.h>
 #include "logtree.h"
 
+//Inicializa o registrador l.
 void log_inicializar(Log **l){
     *l = NULL;
 }
 
+/*Inclui um registro de tempo de atendimento da conta de número “conta”, que faz parte da classe de número
+“classe”, que esperou “timer” minutos para ser atendido pelo caixa de número “caixa”.*/
 void log_registrar(Log **l, int conta, int classe, int timer, int caixa){
     Log *novoElemento;
 
@@ -44,6 +47,7 @@ void log_registrar(Log **l, int conta, int classe, int timer, int caixa){
     }
 }
 
+//Retorna o tempo médio de espera, em minutos, para a classe de número “classe”.
 float log_media_por_classe(Log **l, int classe){
     float tempo_total, qtd_clientes, tempo_medio;
 
@@ -53,6 +57,8 @@ float log_media_por_classe(Log **l, int classe){
     return tempo_medio;
 }
 
+/*Retorna a soma dos tempos de espera de todos os clientes cujas contas fazem parte da classe de número
+“classe”.*/
 int log_obter_soma_por_classe(Log **l, int classe){
     if (*l == NULL){
         return 0;
@@ -65,6 +71,7 @@ int log_obter_soma_por_classe(Log **l, int classe){
     }
 }
 
+//Retorna a quantidade de clientes atendidos cujas contas são da categoria de número “classe”.
 int log_obter_contagem_por_classe(Log **l, int classe){
     if (*l == NULL){
         return 0;
