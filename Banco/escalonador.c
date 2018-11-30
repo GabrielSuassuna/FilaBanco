@@ -359,7 +359,7 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
     Log *registrador;
     FILE *arquivo_saida;
     int timer = 0, caixa[10], index, qtde_operacoes, conta, classe, verificador, caixaAtual, maior = 0, tempoTotal, operacao[5], caixaValor[10];
-    double qtde_clientes, qtde_operacoes_por_classe, tempoMedio, qtde_Media;
+    float qtde_clientes, qtde_operacoes_por_classe, tempoMedio, qtde_Media;
     char classeStr[10];
     e_conf_por_arquivo(e, nome_arq_in);
     arquivo_saida = fopen(nome_arq_out, "w");
@@ -455,7 +455,7 @@ void e_rodar (Escalonador *e, char *nome_arq_in, char *nome_arq_out){
     fprintf(arquivo_saida,"Tempo medio de espera dos %.0f clientes Comuns: %.2f\n", qtde_clientes, tempoMedio);
 
 
-    //Quantidades medias
+    //Quantidades medias de operaçoes
     qtde_operacoes_por_classe = operacao[0];
     qtde_clientes = log_obter_contagem_por_classe(&registrador, 1);
     qtde_Media = qtde_operacoes_por_classe/qtde_clientes;
