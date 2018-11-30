@@ -1,0 +1,26 @@
+int log_obter_contagem_sucessor (Log **l, int contador, int classe){
+    Log *auxiliar;
+    
+    auxiliar = malloc(sizeof(Log));
+    *auxiliar = **l;
+    if ((*l)->direito != NULL){
+        while ((*l)->esquerdo != NULL){
+            *l = (*l)->esquerdo;
+        }
+    }
+
+    auxiliar = (*l)->pai;
+    while (auxiliar != NULL && *l == auxiliar->direito){
+        *l = auxiliar;
+        auxiliar = auxiliar->pai;
+    }
+    if (auxiliar != NULL){
+        return contador;
+    } else {
+        if (auxiliar->classe == classe){
+            return log_obter_contagem_sucessor (&auxiliar, contador+1, classe);
+        } else {
+            return log_obter_contagem_sucessor (&auxiliar, contador, classe);
+        }   
+    }
+}

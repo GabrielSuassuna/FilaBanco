@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 #include "logtree.h"
 
 void log_inicializar(Log **l){
@@ -10,79 +9,44 @@ void log_inicializar(Log **l){
 
 void log_registrar(Log **l, int conta, int classe, int timer, int caixa){
     Log *novoElemento;
-    Log *auxiliar;
-    
-    novoElemento = malloc(sizeof(Log));
-    novoElemento->conta = conta;
-    novoElemento->classe = classe;
-    novoElemento->timer = timer;
-    novoElemento->caixa = caixa;
-    
 
     if (*l == NULL){
-        novoElemento->pai = NULL;
+        novoElemento = malloc(sizeof(Log));
+        novoElemento->conta = conta;
+        novoElemento->classe = classe;
+        novoElemento->timer = timer;
+        novoElemento->caixa = caixa;
         novoElemento->esquerdo = NULL;
         novoElemento->direito = NULL;
+        novoElemento->pai = NULL;
         *l = novoElemento;
     } else {
-        auxiliar = malloc(sizeof(Log));
-        *auxiliar = **l;
-
-        while (*l != NULL) {
-            *auxiliar = **l;
-            
-            if (novoElemento->classe < (*l)->classe) {
-                *l = (*l)->esquerdo;
-            } else if (novoElemento->classe > (*l)->classe){
-                *l = (*l)->direito;
+        
+        if ((*l)->esquerdo != NULL &&  conta < (*l)->conta){
+            log_registrar(&(*l)->esquerdo, conta, classe, timer, caixa);
+        } else if ((*l)->direito != NULL &&  conta > (*l)->conta){
+            log_registrar(&(*l)->direito, conta, classe, timer, caixa);
+        } else {
+            novoElemento = malloc(sizeof(Log));
+            novoElemento->conta = conta;
+            novoElemento->classe = classe;
+            novoElemento->timer = timer;
+            novoElemento->caixa = caixa;
+            novoElemento->esquerdo = NULL;
+            novoElemento->direito = NULL;
+            novoElemento->pai = *l;
+            if (conta < (*l)->conta){
+                (*l)->esquerdo = novoElemento;
             } else {
-                if (novoElemento->conta < novoElemento->conta){
-                    *l = (*l)->esquerdo; 
-                } else {
-                    *l = (*l)->direito;
-                }
+                (*l)->direito = novoElemento;
             }
         }
-
-        novoElemento->pai = auxiliar;
-        
-        if (novoElemento->conta < auxiliar->conta){
-            auxiliar->esquerdo = novoElemento;
-        } else {
-            auxiliar->direito = novoElemento;
-        }
-    }
-}
-
-int percorrer_arvore_cliente (Log *l, int *contador) {
-    if (l != NULL){
-        percorrer_arvore_cliente (l->esquerdo, contador);
-        *contador = *contador + l->timer;
-        percorrer_arvore_cliente (l->direito, contador);
-    }
-}
-
-int percorrer_arvore_tempo (Log *l, int *tempo) {
-    if (l != NULL){
-        percorrer_arvore_tempo (l->esquerdo, tempo);
-        *tempo = *tempo + l->timer;
-        percorrer_arvore_tempo (l->direito, tempo);
     }
 }
 
 float log_media_por_classe(Log **l, int classe){
-    Log *auxiliar;
-    int tempo_total, tempo_medio, qtd_clientes;
-
-    auxiliar = *l;
-
-    while (auxiliar->classe =! classe) {
-        if (auxiliar->classe < classe) {
-            auxiliar = auxiliar->esquerdo;
-        } else {
-            auxiliar = auxiliar->direito;
-        }
-    }
+    int tempo_total, qtd_clientes;
+    float tempo_medio;
 
     tempo_total = log_obter_soma_por_classe(l, classe);
     qtd_clientes = log_obter_contagem_por_classe(l, classe);
@@ -91,33 +55,25 @@ float log_media_por_classe(Log **l, int classe){
 }
 
 int log_obter_soma_por_classe(Log **l, int classe){
-    Log *auxiliar;
-    int *tempo;
-
-    while (auxiliar->classe =! classe) {
-        if (auxiliar->classe < classe) {
-            auxiliar = auxiliar->esquerdo;
+    if (*l == NULL){
+        return 0;
+    } else {
+        if ((*l)->classe != classe){
+            return 0 + log_obter_soma_por_classe(&(*l)->esquerdo , classe) + log_obter_soma_por_classe(&(*l)->direito , classe);
         } else {
-            auxiliar = auxiliar->direito;
+            return (*l)->timer + log_obter_soma_por_classe(&(*l)->esquerdo , classe) + log_obter_soma_por_classe(&(*l)->direito , classe);
         }
     }
-
-    percorrer_arvore_tempo(auxiliar, tempo);
-    return *tempo;
 }
 
 int log_obter_contagem_por_classe(Log **l, int classe){
-    Log *auxiliar;
-    int *contador;
-
-    while (auxiliar->classe =! classe) {
-        if (auxiliar->classe < classe) {
-            auxiliar = auxiliar->esquerdo;
+    if (*l == NULL){
+        return 0;
+    } else {
+        if ((*l)->classe != classe){
+            return 0 + log_obter_contagem_por_classe(&(*l)->esquerdo , classe) + log_obter_contagem_por_classe(&(*l)->direito , classe);
         } else {
-            auxiliar = auxiliar->direito;
+            return 1 + log_obter_contagem_por_classe(&(*l)->esquerdo , classe) + log_obter_contagem_por_classe(&(*l)->direito , classe);
         }
     }
-
-    percorrer_arvore_cliente(auxiliar, contador);
-    return *contador;
 }
