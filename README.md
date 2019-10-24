@@ -1,2 +1,2 @@
 # FilaBanco
-Projeto em c para a cadeira de programação
+Projeto em c para a cadeira de programação.
